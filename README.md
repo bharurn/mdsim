@@ -1,2 +1,2 @@
 # mdsim
-A molecular dynamics simulation.
+A molecular dynamics simulator. Currently only supports LJ potential as force field between the particles, and NVE or NVT (using Nose-Hoover thermostat) ensembles. Neighbour list method is used to speed up the computation. The input paramters and coordinates must be given in a file named 'input.xyz'. The output trajectories will be outputted in a file 'out.xyz' in xyz format, and the enegies, temperature, etc will be outputted in a file 'log.txt'.
