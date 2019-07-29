@@ -36,7 +36,7 @@ public:
 class atom
 {
 public:
-	vec pos, vel, force, posp, dist;
+	vec pos, vel, force, posp, dist, v; // v is to store half velocity
 	int ix=0, iy=0, iz=0;
 	atom() {}
 	atom(vec v, vec ve)
