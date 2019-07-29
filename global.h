@@ -4,16 +4,18 @@
 #include "types.h"
 #include <cmath>
 #include <vector>
+#include <map> 
 
 namespace global
 {
-	real xlen = 100, ylen = 100, zlen = 100, dT = 0.003;
-	real temp, pe, etot;
-	int T_f = 1000, n_prt = 1000;
+	real pe, etot, sumv_sq=0, set_temp;
+	int n_prt = 1000, T_f, dump_time;
+	
+	std::map<std::string, real> input;
+	
 	vec comv(0.0, 0.0, 0.0);
-	real cut = 2.5, ecut = 4 * pow(cut, -6) * (pow(cut, -6) - 1), skin = 0.3;
+	real ecut;
 	std::vector<atom> prt_list(0);
-	int dump_time = 1;
 }
 
 #endif
